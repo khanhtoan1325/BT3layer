@@ -143,5 +143,18 @@ namespace Lab06
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
+
+        private void dgvStudent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if(e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvStudent.Rows[e.RowIndex];
+                txtMa.Text = row.Cells[0].Value.ToString();
+                txtHoTen.Text = row.Cells[1].Value.ToString();
+                cmbKhoa.Text = row.Cells[2].Value.ToString();
+                txtDiem.Text = row.Cells[3].Value.ToString();
+            }    
+        }
     }
 }
