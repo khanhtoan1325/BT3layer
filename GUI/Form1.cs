@@ -154,7 +154,8 @@ namespace Lab06
                 txtHoTen.Text = row.Cells[1].Value.ToString();
                 cmbKhoa.Text = row.Cells[2].Value.ToString();
                 txtDiem.Text = row.Cells[3].Value.ToString();
-            }    
+            }
+               
         }
     }
 }

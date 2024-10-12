@@ -60,6 +60,7 @@
             // 
             // dgvStudent
             // 
+            this.dgvStudent.AllowUserToAddRows = false;
             this.dgvStudent.AllowUserToDeleteRows = false;
             this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -70,7 +71,6 @@
             this.Column5});
             this.dgvStudent.Location = new System.Drawing.Point(364, 111);
             this.dgvStudent.Name = "dgvStudent";
-            this.dgvStudent.ReadOnly = true;
             this.dgvStudent.RowHeadersWidth = 51;
             this.dgvStudent.RowTemplate.Height = 24;
             this.dgvStudent.Size = new System.Drawing.Size(832, 425);
