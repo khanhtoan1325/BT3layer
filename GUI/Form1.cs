@@ -54,27 +54,27 @@ namespace Lab06
                 int index = dgvStudent.Rows.Add();
                 dgvStudent.Rows[index].Cells[0].Value = item.StudentID;
                 dgvStudent.Rows[index].Cells[1].Value = item.FullName;
-                if(item.Faculty != null)
+                if (item.Faculty != null)
                     dgvStudent.Rows[index].Cells[2].Value = item.Faculty.FacultyName;
                 dgvStudent.Rows[index].Cells[3].Value = item.AverageScore + "";
-                if(item.MajorID != null)
-                    dgvStudent.Rows[index].Cells[4].Value = item.Major.Name+"";
+                if (item.MajorID != null)
+                    dgvStudent.Rows[index].Cells[4].Value = item.Major.Name + "";
                 //ShowAvatar(item.Avatar); 
-            }    
+            }
         }
-        private void ShowAvatar (string ImageName)
+        private void ShowAvatar(string ImageName)
         {
-            if(string.IsNullOrEmpty(ImageName))
+            if (string.IsNullOrEmpty(ImageName))
             {
                 picAvata.Image = null;
-            }  
+            }
             else
             {
                 string parentDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).FullName;
-                string imagePath = Path.Combine(parentDirectory,"images", ImageName);
+                string imagePath = Path.Combine(parentDirectory, "images", ImageName);
                 picAvata.Image = Image.FromFile(imagePath);
                 picAvata.Refresh();
-            }    
+            }
         }
         private void setGridViewStyle(DataGridView dgView)
         {
@@ -88,14 +88,14 @@ namespace Lab06
         private void chkChuaDK_CheckedChanged(object sender, EventArgs e)
         {
             var listStudent = new List<Student>();
-            if(chkChuaDK.Checked)
+            if (chkChuaDK.Checked)
             {
                 listStudent = studentService.GetAllHasNoMajor();
             }
             else
             {
                 listStudent = studentService.GetAll();
-                
+
             }
             BindGrid(listStudent);
         }
@@ -146,8 +146,8 @@ namespace Lab06
 
         private void dgvStudent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            if(e.RowIndex >= 0)
+
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvStudent.Rows[e.RowIndex];
                 txtMa.Text = row.Cells[0].Value.ToString();
@@ -155,7 +155,18 @@ namespace Lab06
                 cmbKhoa.Text = row.Cells[2].Value.ToString();
                 txtDiem.Text = row.Cells[3].Value.ToString();
             }
-               
+
+        }
+
+        private void mnstripDangKy_Click(object sender, EventArgs e)
+        {
+            DangKyChuyenNganh frmChuyenNganh = new DangKyChuyenNganh();
+            frmChuyenNganh.ShowDialog();
+        }
+
+        private void btnLayAnh_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

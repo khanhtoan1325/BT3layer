@@ -36,6 +36,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnstripDangKy = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpDate = new System.Windows.Forms.Button();
@@ -52,6 +53,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.chkChuaDK = new System.Windows.Forms.CheckBox();
+            this.btnLayAnh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -111,7 +113,7 @@
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Chuyên Nghành";
+            this.Column5.HeaderText = "Chuyên Ngành";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
@@ -130,12 +132,22 @@
             // 
             // chứcNăngToolStripMenuItem
             // 
+            this.chứcNăngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnstripDangKy});
             this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
             this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.chứcNăngToolStripMenuItem.Text = "Chức Năng";
             // 
+            // mnstripDangKy
+            // 
+            this.mnstripDangKy.Name = "mnstripDangKy";
+            this.mnstripDangKy.Size = new System.Drawing.Size(247, 26);
+            this.mnstripDangKy.Text = "Đăng Ký Chuyên Ngành";
+            this.mnstripDangKy.Click += new System.EventHandler(this.mnstripDangKy_Click);
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLayAnh);
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnUpDate);
             this.groupBox1.Controls.Add(this.btnAdd);
@@ -186,7 +198,7 @@
             // 
             // picAvata
             // 
-            this.picAvata.Location = new System.Drawing.Point(164, 230);
+            this.picAvata.Location = new System.Drawing.Point(135, 230);
             this.picAvata.Name = "picAvata";
             this.picAvata.Size = new System.Drawing.Size(165, 98);
             this.picAvata.TabIndex = 6;
@@ -291,6 +303,16 @@
             this.chkChuaDK.UseVisualStyleBackColor = true;
             this.chkChuaDK.CheckedChanged += new System.EventHandler(this.chkChuaDK_CheckedChanged);
             // 
+            // btnLayAnh
+            // 
+            this.btnLayAnh.Location = new System.Drawing.Point(306, 269);
+            this.btnLayAnh.Name = "btnLayAnh";
+            this.btnLayAnh.Size = new System.Drawing.Size(46, 23);
+            this.btnLayAnh.TabIndex = 8;
+            this.btnLayAnh.Text = "...";
+            this.btnLayAnh.UseVisualStyleBackColor = true;
+            this.btnLayAnh.Click += new System.EventHandler(this.btnLayAnh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -344,6 +366,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.ToolStripMenuItem mnstripDangKy;
+        private System.Windows.Forms.Button btnLayAnh;
     }
 }
 
